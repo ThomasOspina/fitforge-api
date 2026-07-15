@@ -1,0 +1,4 @@
+export declare class PaginationQueryDto {
+    page: 1;
+    limit: 10;
+}
