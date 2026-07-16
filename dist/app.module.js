@@ -14,6 +14,8 @@ const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const configuration_1 = __importDefault(require("./config/configuration"));
 const env_validation_1 = require("./config/env.validation");
+const auth_module_1 = require("./modules/auth/auth.module");
+const prisma_module_1 = require("./prisma/prisma.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -25,6 +27,8 @@ exports.AppModule = AppModule = __decorate([
                 load: [configuration_1.default],
                 validationSchema: env_validation_1.envValidationSchema,
             }),
+            prisma_module_1.PrismaModule,
+            auth_module_1.AuthModule,
         ],
     })
 ], AppModule);
