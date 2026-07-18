@@ -5,5 +5,10 @@ declare const _default: () => {
     database: {
         url: string | undefined;
     };
+    jwt: {
+        secret: string | undefined;
+        expiresIn: string | undefined;
+        refreshExpiresIn: string | undefined;
+    };
 };
 export default _default;
